@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Event Registration Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Event Registration Form</h2>
+        <form id="registrationForm">
+            <!-- Full Name -->
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" class="inputField" required>
+
+            <!-- Email Address -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" class="inputField" required>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" class="inputField" required>
+
+            <!-- Select Event Type -->
+            <label for="eventType">Select Event Type:</label>
+            <select id="eventType" class="inputField" required>
+                <option value="" disabled selected>Select Event Type</option>
+                <option value="conference">Conference</option>
+                <option value="workshop">Workshop</option>
+                <option value="seminar">Seminar</option>
+            </select>
+
+            <!-- Choose Preferred Sessions -->
+            <label>Choose Preferred Sessions:</label>
+            <div class="sessions">
+                <input type="checkbox" id="session1" class="inputField">
+                <label for="session1">Session 1</label>
+                <input type="checkbox" id="session2" class="inputField">
+                <label for="session2">Session 2</label>
+                <input type="checkbox" id="session3" class="inputField">
+                <label for="session3">Session 3</label>
+            </div>
+
+            <!-- Dietary Restrictions -->
+            <label>Dietary Restrictions:</label>
+            <div class="diet">
+                <input type="radio" id="vegetarian" name="diet" class="inputField">
+                <label for="vegetarian">Vegetarian</label>
+                <input type="radio" id="vegan" name="diet" class="inputField">
+                <label for="vegan">Vegan</label>
+                <input type="radio" id="nonVegetarian" name="diet" class="inputField">
+                <label for="nonVegetarian">Non-Vegetarian</label>
+            </div>
+
+            <!-- Additional Comments -->
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" class="inputField"></textarea>
+
+            <!-- Submit Button -->
+            <button type="button" onclick="validateForm()">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
